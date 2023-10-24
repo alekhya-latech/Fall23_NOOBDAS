@@ -10,6 +10,7 @@ namespace Fall2020_CSC403_Project {
     public static FrmBattle instance = null;
     private Enemy enemy;
     private Player player;
+    private Boolean isWin = true;
 
     private FrmBattle() {
       InitializeComponent();
@@ -70,10 +71,19 @@ namespace Fall2020_CSC403_Project {
       }
 
       UpdateHealthBars();
-      if (player.Health <= 0 || enemy.Health <= 0) {
-        instance = null;
-        Close();
-      }
+            if (player.Health <= 0 || enemy.Health<=0)
+            {
+                Close();
+                if(player.Health<=0)
+                    isWin = false;
+                ResultForm resultForm = new ResultForm(isWin);
+                resultForm.ShowDialog(); // Show the result form as a dialog.
+                instance = null;
+            }
+        
+        
+       
+      
     }
 
     private void EnemyDamage(int amount) {
