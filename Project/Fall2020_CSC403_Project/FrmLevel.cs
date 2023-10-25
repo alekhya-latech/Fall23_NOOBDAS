@@ -6,7 +6,6 @@ using System.Windows.Forms;
 namespace Fall2020_CSC403_Project {
   public partial class FrmLevel : Form {
     private Player player;
-
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
@@ -15,15 +14,20 @@ namespace Fall2020_CSC403_Project {
     private DateTime timeBegin;
     private FrmBattle frmBattle;
 
-    public FrmLevel() {
+    public FrmLevel(Image playerSkin) {
       InitializeComponent();
-    }
+            const int PADDING = 7;
+            player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+            picPlayer.BackgroundImage = playerSkin;
 
-    private void FrmLevel_Load(object sender, EventArgs e) {
+        }
+
+      private void FrmLevel_Load(object sender, EventArgs e) {
       const int PADDING = 7;
       const int NUM_WALLS = 13;
 
-      player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+     
+     
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));

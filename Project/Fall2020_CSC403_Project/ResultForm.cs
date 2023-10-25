@@ -39,8 +39,8 @@ namespace Fall2020_CSC403_Project
         {
             // Handle the "Play Again" button click.
             // You can hide the result form and return to the main game window.
-            FrmLevel frmLevel = new FrmLevel();
-            frmLevel.ShowDialog();
+            Welcome welcome = new Welcome();
+            welcome.ShowDialog();
             Close();
             // Add code to resume or restart the game here.
         }
