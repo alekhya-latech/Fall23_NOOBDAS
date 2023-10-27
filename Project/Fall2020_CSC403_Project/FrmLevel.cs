@@ -20,6 +20,7 @@ namespace Fall2020_CSC403_Project {
       const int PADDING = 7;
       player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
       picPlayer.BackgroundImage = playerSkin;
+      player.Img = playerSkin;
       
 
         }
@@ -139,12 +140,14 @@ namespace Fall2020_CSC403_Project {
     private void Fight(Enemy enemy) {
       player.ResetMoveSpeed();
       player.MoveBack();
-      frmBattle = FrmBattle.GetInstance(enemy);
-      frmBattle.Show();
+      frmBattle = FrmBattle.GetInstance(enemy, player);
+            if (enemy == bossKoolaid)
+            {
+                frmBattle.SetupForBossBattle();
+            }
+            frmBattle.Show();
       
-      if (enemy == bossKoolaid) {
-        frmBattle.SetupForBossBattle();
-      }
+      
     }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {

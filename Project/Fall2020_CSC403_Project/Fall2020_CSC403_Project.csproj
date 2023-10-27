@@ -138,8 +138,13 @@
     <None Include="data\play again.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\swordman.png" />
+    <None Include="data\fireman.png" />
+    <None Include="data\pumpkinHead.png" />
     <None Include="data\skin2.jpeg" />
     <None Include="data\diamond.png" />
+    <None Include="data\cuteboy.png" />
+    <None Include="data\cute man.png" />
     <Content Include="data\exit.jpeg" />
     <None Include="data\gold.png" />
     <None Include="data\skin1.jpeg" />
