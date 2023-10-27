@@ -39,9 +39,8 @@ namespace Fall2020_CSC403_Project
         {
             // Handle the "Play Again" button click.
             // You can hide the result form and return to the main game window.
-            Welcome welcome = new Welcome();
-            welcome.ShowDialog();
-            Close();
+
+            Application.Restart();
             // Add code to resume or restart the game here.
         }
 
@@ -49,8 +48,7 @@ namespace Fall2020_CSC403_Project
         {
             // Handle the "Close" button click.
             // You can close the result form and return to the main menu or exit the game.
-            this.Close();
-            Close();
+           Application.Exit();
         }
 
         private void InitializeComponent()
@@ -98,6 +96,7 @@ namespace Fall2020_CSC403_Project
             this.Controls.Add(this.buttonPlayAgain);
             this.Controls.Add(this.label1);
             this.Name = "ResultForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

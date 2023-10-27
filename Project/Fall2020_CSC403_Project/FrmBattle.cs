@@ -11,6 +11,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemy;
     private Player player;
     private Boolean isWin = true;
+    private Boolean bossBattle = false;
 
     private FrmBattle() {
       InitializeComponent();
@@ -30,16 +31,17 @@ namespace Fall2020_CSC403_Project {
 
       // show health
       UpdateHealthBars();
+
     }
 
     public void SetupForBossBattle() {
       picBossBattle.Location = Point.Empty;
-      picBossBattle.Size = ClientSize;
+      picBossBattle.Size = MaximumSize;
       picBossBattle.Visible = true;
 
       SoundPlayer simpleSound = new SoundPlayer(Resources.final_battle);
       simpleSound.Play();
-
+      bossBattle = true;
       tmrFinalBattle.Enabled = true;
     }
 
@@ -52,7 +54,7 @@ namespace Fall2020_CSC403_Project {
       return instance;
     }
 
-    private void UpdateHealthBars() {
+        private void UpdateHealthBars() {
       float playerHealthPer = player.Health / (float)player.MaxHealth;
       float enemyHealthPer = enemy.Health / (float)enemy.MaxHealth;
 
@@ -64,27 +66,38 @@ namespace Fall2020_CSC403_Project {
       lblEnemyHealthFull.Text = enemy.Health.ToString();
     }
 
-    private void btnAttack_Click(object sender, EventArgs e) {
-      player.OnAttack(-4);
-      if (enemy.Health > 0) {
-        enemy.OnAttack(-2);
-      }
-
-      UpdateHealthBars();
-            if (player.Health <= 0 || enemy.Health<=0)
+        private void btnAttack_Click(object sender, EventArgs e)
+        {
+            player.OnAttack(-4);
+            if (enemy.Health > 0)
             {
-                Close();
-                if(player.Health<=0)
-                    isWin = false;
-                ResultForm resultForm = new ResultForm(isWin);
-                resultForm.ShowDialog(); // Show the result form as a dialog.
-                instance = null;
+                if(!bossBattle)
+                    enemy.OnAttack(-2);
+                else
+                    enemy.OnAttack(-3);
             }
-        
-        
-       
-      
-    }
+
+            UpdateHealthBars();
+
+            if ((enemy.Health <= 0 || player.Health <= 0))
+            {
+                if (bossBattle || player.Health<=0)
+                {
+                    Close();
+                    if (player.Health <= 0)
+                        isWin = false;
+                    ResultForm resultForm = new ResultForm(isWin);
+                    resultForm.ShowDialog(); // Show the result form as a dialog.
+                    instance = null;
+                }
+                else
+                {
+                       Close();
+                    instance = null;
+                }
+               
+            }
+        }
 
     private void EnemyDamage(int amount) {
       enemy.AlterHealth(amount);

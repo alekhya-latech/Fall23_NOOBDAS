@@ -9,20 +9,21 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
-    private Character[] walls;
-
-    private DateTime timeBegin;
+    private HealingObject goldcoin;
+    private HealingObject diamond;
     private FrmBattle frmBattle;
-
+    private Character[] walls;
+    private DateTime timeBegin;
+   
     public FrmLevel(Image playerSkin) {
       InitializeComponent();
-            const int PADDING = 7;
-            player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
-            picPlayer.BackgroundImage = playerSkin;
+      const int PADDING = 7;
+      player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+      picPlayer.BackgroundImage = playerSkin;
+      
 
         }
-
-      private void FrmLevel_Load(object sender, EventArgs e) {
+    private void FrmLevel_Load(object sender, EventArgs e) {
       const int PADDING = 7;
       const int NUM_WALLS = 13;
 
@@ -31,10 +32,16 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
-
+      
+      goldcoin = new HealingObject(CreatePosition(picGoldCoin), CreateCollider(picGoldCoin, PADDING));
+      diamond = new HealingObject(CreatePosition(picDiamond), CreateCollider(picDiamond, PADDING)); 
+      
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+
+      goldcoin.Img = picGoldCoin.BackgroundImage;
+      diamond.Img = picDiamond.BackgroundImage;
 
       bossKoolaid.Color = Color.Red;
       enemyPoisonPacket.Color = Color.Green;
@@ -78,19 +85,40 @@ namespace Fall2020_CSC403_Project {
         player.MoveBack();
       }
 
-      // check collision with enemies
-      if (HitAChar(player, enemyPoisonPacket)) {
+            // check collision with enemies
+      if (HitAChar(player, enemyPoisonPacket) && picEnemyPoisonPacket!= null)
+      {
+        picEnemyPoisonPacket.Visible = false;
         Fight(enemyPoisonPacket);
+        picEnemyPoisonPacket = null;
       }
-      else if (HitAChar(player, enemyCheeto)) {
+      else if (HitAChar(player, enemyCheeto) && picEnemyCheeto!=null)
+      {
+        picEnemyCheeto.Visible = false;
         Fight(enemyCheeto);
+        picEnemyCheeto = null;
       }
       if (HitAChar(player, bossKoolaid)) {
         Fight(bossKoolaid);
       }
 
-      // update player's picture box
-      picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+      //check collision with Healing Objects
+      if (HitAChar(player, goldcoin))
+            {
+                picGoldCoin.Visible = false;
+                player.Health = 20;
+            }
+
+      if (HitAChar(player, diamond))
+            {
+                picDiamond.Visible = false;
+                player.Health = 20;
+            }
+
+            // update player's picture box
+            picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+            scoreDisplay.Text = player.Health.ToString();
+           
     }
 
     private bool HitAWall(Character c) {

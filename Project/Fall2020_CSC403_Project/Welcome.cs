@@ -24,22 +24,12 @@ namespace Fall2020_CSC403_Project
 
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(411, 362);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -68,6 +58,17 @@ namespace Fall2020_CSC403_Project
             this.label1.TabIndex = 4;
             this.label1.Text = "Select character!!";
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.skin2;
+            this.button2.Location = new System.Drawing.Point(454, 242);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(204, 211);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.skin1;
@@ -87,6 +88,7 @@ namespace Fall2020_CSC403_Project
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Welcome";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,24 +98,28 @@ namespace Fall2020_CSC403_Project
         {
             FrmLevel frmlevel = new FrmLevel(button1.BackgroundImage);
             frmlevel.ShowDialog();
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             FrmLevel frmlevel = new FrmLevel(button2.BackgroundImage);
             frmlevel.ShowDialog();
+            Close();
 
         }
         private void button3_Click(object sender, EventArgs e)
-        {
-            FrmLevel frmlevel = new FrmLevel(button2.BackgroundImage);
+        {   
+            FrmLevel frmlevel = new FrmLevel(button3.BackgroundImage);
             frmlevel.ShowDialog();
+            Close();
 
         }
         private void button4_Click(object sender, EventArgs e)
-        {
+        {   
             FrmLevel frmlevel = new FrmLevel(button2.BackgroundImage);
             frmlevel.ShowDialog();
+            Close();
 
         }
 
