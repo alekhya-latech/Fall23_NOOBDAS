@@ -126,7 +126,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="code\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyGameLibrary\MyGameLibrary.csproj">
@@ -139,6 +138,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\exit.jpeg" />
+    <None Include="Resources\healthkit.png" />
+    <None Include="Resources\SKIN4.jpeg" />
+    <None Include="Resources\SKIN3.jpg" />
+    <None Include="Resources\SKIN2.jpg" />
+    <None Include="Resources\SKIN1.jpg" />
+    <None Include="Resources\SKIN1.bmp" />
     <None Include="data\skin1.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
