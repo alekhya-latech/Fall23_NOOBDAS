@@ -24,6 +24,7 @@ namespace Fall2020_CSC403_Project
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -33,9 +34,10 @@ namespace Fall2020_CSC403_Project
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(411, 362);
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.Location = new System.Drawing.Point(403, 160);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(147, 163);
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -43,18 +45,18 @@ namespace Fall2020_CSC403_Project
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(785, 362);
+            this.button3.Location = new System.Drawing.Point(652, 160);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(160, 163);
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1053, 362);
+            this.button4.Location = new System.Drawing.Point(984, 160);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(154, 163);
             this.button4.TabIndex = 3;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -70,10 +72,9 @@ namespace Fall2020_CSC403_Project
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.skin1;
-            this.button1.Location = new System.Drawing.Point(63, 254);
+            this.button1.Location = new System.Drawing.Point(65, 141);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 184);
+            this.button1.Size = new System.Drawing.Size(205, 182);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
