@@ -113,9 +113,6 @@
     <None Include="data\battle_screen.fw.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="data\wall.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="data\enemy_cheetos.fw.png" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +135,7 @@
     <None Include="data\play again.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\wall.jpg" />
     <None Include="data\swordman.png" />
     <None Include="data\fireman.png" />
     <None Include="data\pumpkinHead.png" />
