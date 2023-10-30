@@ -108,21 +108,36 @@ namespace Fall2020_CSC403_Project {
             {
                 picGoldCoin.Visible = false;
                 player.Health = 20;
+
             }
 
       if (HitAChar(player, diamond))
-            {
+            { 
                 picDiamond.Visible = false;
                 player.Health = 20;
             }
 
             // update player's picture box
             picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
-            scoreDisplay.Text = player.Health.ToString();
+            UpdateHealthBar();
            
     }
 
-    private bool HitAWall(Character c) {
+        private void UpdateHealthBar()
+        {
+            float playerHealthPer = player.Health / (float)player.MaxHealth;
+           
+
+            const int MAX_HEALTHBAR_WIDTH = 180;
+            PlayerHealth.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
+            
+            if(PlayerHealth.Width <=MAX_HEALTHBAR_WIDTH*0.6) { PlayerHealth.BackColor = Color.Red; }
+            else { PlayerHealth.BackColor = Color.Green;}
+           
+        }
+
+
+        private bool HitAWall(Character c) {
       bool hitAWall = false;
       for (int w = 0; w < walls.Length; w++) {
         if (c.Collider.Intersects(walls[w].Collider)) {
@@ -177,5 +192,6 @@ namespace Fall2020_CSC403_Project {
     private void lblInGameTime_Click(object sender, EventArgs e) {
 
     }
-  }
+
+    }
 }

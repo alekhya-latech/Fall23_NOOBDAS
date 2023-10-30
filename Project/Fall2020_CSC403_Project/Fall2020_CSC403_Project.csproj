@@ -135,6 +135,8 @@
     <None Include="data\play again.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\coin.mp3" />
+    <None Include="data\coin.wav" />
     <Content Include="data\wall.jpg" />
     <None Include="data\swordman.png" />
     <None Include="data\fireman.png" />

@@ -48,6 +48,7 @@
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
             this.picDiamond = new System.Windows.Forms.PictureBox();
+            this.PlayerHealth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picGoldCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
@@ -97,13 +98,13 @@
             // scoreDisplay
             // 
             this.scoreDisplay.AutoSize = true;
-            this.scoreDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreDisplay.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.scoreDisplay.Location = new System.Drawing.Point(1725, 14);
+            this.scoreDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreDisplay.ForeColor = System.Drawing.Color.Orange;
+            this.scoreDisplay.Location = new System.Drawing.Point(1706, 26);
             this.scoreDisplay.Name = "scoreDisplay";
-            this.scoreDisplay.Size = new System.Drawing.Size(85, 59);
+            this.scoreDisplay.Size = new System.Drawing.Size(115, 37);
             this.scoreDisplay.TabIndex = 19;
-            this.scoreDisplay.Text = "20";
+            this.scoreDisplay.Text = "Health";
             // 
             // picGoldCoin
             // 
@@ -326,6 +327,17 @@
             this.picDiamond.TabIndex = 20;
             this.picDiamond.TabStop = false;
             // 
+            // PlayerHealth
+            // 
+            this.PlayerHealth.BackColor = System.Drawing.Color.Green;
+            this.PlayerHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerHealth.ForeColor = System.Drawing.Color.White;
+            this.PlayerHealth.Location = new System.Drawing.Point(1637, 63);
+            this.PlayerHealth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PlayerHealth.Name = "PlayerHealth";
+            this.PlayerHealth.Size = new System.Drawing.Size(265, 31);
+            this.PlayerHealth.TabIndex = 21;
+            // 
             // FrmLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -333,6 +345,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.PlayerHealth);
             this.Controls.Add(this.picDiamond);
             this.Controls.Add(this.scoreDisplay);
             this.Controls.Add(this.picGoldCoin);
@@ -412,6 +425,7 @@
         private System.Windows.Forms.PictureBox picGoldCoin;
         private System.Windows.Forms.Label scoreDisplay;
         private System.Windows.Forms.PictureBox picDiamond;
+        private System.Windows.Forms.Label PlayerHealth;
     }
 }
 
