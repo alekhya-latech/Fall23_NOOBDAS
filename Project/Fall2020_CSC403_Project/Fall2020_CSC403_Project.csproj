@@ -137,6 +137,8 @@
   <ItemGroup>
     <None Include="data\playagain.png" />
     <None Include="data\play_again.png" />
+    <None Include="data\loss.jpeg" />
+    <None Include="data\coin.wav" />
     <Content Include="data\wingame.wav" />
     <None Include="data\win.jpg" />
     <Content Include="data\lossgame.wav" />

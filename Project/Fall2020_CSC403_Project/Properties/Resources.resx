@@ -166,4 +166,13 @@
   <data name="play_again1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\play_again.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\loss.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lossgame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\lossgame.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wingame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\wingame.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

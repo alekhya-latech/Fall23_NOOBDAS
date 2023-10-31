@@ -35,12 +35,12 @@ namespace Fall2020_CSC403_Project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(498, 55);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightCoral;
+            this.label1.Location = new System.Drawing.Point(376, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 46);
+            this.label1.Size = new System.Drawing.Size(772, 109);
             this.label1.TabIndex = 4;
             this.label1.Text = "Select character!!";
             // 
@@ -49,7 +49,7 @@ namespace Fall2020_CSC403_Project
             this.button4.AutoEllipsis = true;
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.fireman;
-            this.button4.Location = new System.Drawing.Point(871, 184);
+            this.button4.Location = new System.Drawing.Point(958, 184);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(213, 231);
             this.button4.TabIndex = 3;
@@ -62,7 +62,7 @@ namespace Fall2020_CSC403_Project
             this.button3.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.pumpkinHead;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(623, 176);
+            this.button3.Location = new System.Drawing.Point(707, 175);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(175, 247);
             this.button3.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace Fall2020_CSC403_Project
             // 
             this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.button2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.cute_man;
-            this.button2.Location = new System.Drawing.Point(337, 172);
+            this.button2.Location = new System.Drawing.Point(423, 171);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(204, 255);
             this.button2.TabIndex = 1;
@@ -85,7 +85,7 @@ namespace Fall2020_CSC403_Project
             this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.swordman;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(12, 172);
+            this.button1.Location = new System.Drawing.Point(82, 168);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(282, 254);
             this.button1.TabIndex = 0;
