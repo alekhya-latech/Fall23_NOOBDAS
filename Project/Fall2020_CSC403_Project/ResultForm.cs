@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Fall2020_CSC403_Project.Properties;
+using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project
@@ -10,28 +12,34 @@ namespace Fall2020_CSC403_Project
         private Button button2;
 
         // Store the game result.
-        private bool button1;
+        private bool isWin;
+        
 
-        public ResultForm(bool isWin)
+    public ResultForm(bool isWin)
         {
             InitializeComponent();
-            this.button1 = isWin;
+            this.isWin = isWin;
             DisplayResult();
         }
 
+       
         private void DisplayResult()
         {
-            if (button1)
+            if (isWin)
             {
                 // You can customize the message and appearance for a win.
                 label1.Text = "You Win!";
-                this.BackColor = System.Drawing.Color.Green; // Change the background color for a win.
+                this.BackgroundImage = Resources.win; // Change the background color for a win.
+               // SoundPlayer winSoundPlayer = new SoundPlayer(global::Fall2020_CSC403_Project.Properties.Resources.wingame); // Replace with the path to your win sound file
+               // winSoundPlayer.Play();
             }
             else
             {
                 // Customize the message and appearance for a loss.
                 label1.Text = "You Lose!";
-                this.BackColor = System.Drawing.Color.Red; // Change the background color for a loss.
+               // this.BackColor =Resources.loss; // Change the background color for a loss.
+                //SoundPlayer loseSoundPlayer = new SoundPlayer(Resources.lossgame); // Replace with the path to your lose sound file
+               // loseSoundPlayer.Play();
             }
         }
 
@@ -48,7 +56,7 @@ namespace Fall2020_CSC403_Project
         {
             // Handle the "Close" button click.
             // You can close the result form and return to the main menu or exit the game.
-           Application.Exit();
+            Application.Exit();
         }
 
         private void InitializeComponent()
@@ -71,7 +79,7 @@ namespace Fall2020_CSC403_Project
             // 
             // buttonPlayAgain
             // 
-            this.buttonPlayAgain.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.play_again;
+            
             this.buttonPlayAgain.Location = new System.Drawing.Point(165, 317);
             this.buttonPlayAgain.Name = "buttonPlayAgain";
             this.buttonPlayAgain.Size = new System.Drawing.Size(401, 135);
@@ -102,6 +110,6 @@ namespace Fall2020_CSC403_Project
 
         }
 
-        
+
     }
 }

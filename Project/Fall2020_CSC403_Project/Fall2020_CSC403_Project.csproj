@@ -135,19 +135,19 @@
     <None Include="data\play again.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\coin.mp3" />
-    <None Include="data\coin.wav" />
+    <None Include="data\playagain.png" />
+    <None Include="data\play_again.png" />
+    <Content Include="data\wingame.wav" />
+    <None Include="data\win.jpg" />
+    <Content Include="data\lossgame.wav" />
     <Content Include="data\wall.jpg" />
     <None Include="data\swordman.png" />
     <None Include="data\fireman.png" />
     <None Include="data\pumpkinHead.png" />
-    <None Include="data\skin2.jpeg" />
     <None Include="data\diamond.png" />
-    <None Include="data\cuteboy.png" />
     <None Include="data\cute man.png" />
     <Content Include="data\exit.jpeg" />
     <None Include="data\gold.png" />
-    <None Include="data\skin1.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
