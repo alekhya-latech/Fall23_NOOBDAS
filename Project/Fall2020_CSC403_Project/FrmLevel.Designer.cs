@@ -29,6 +29,8 @@
             this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
             this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
             this.scoreDisplay = new System.Windows.Forms.Label();
+            this.PlayerHealth = new System.Windows.Forms.Label();
+            this.picDiamond = new System.Windows.Forms.PictureBox();
             this.picGoldCoin = new System.Windows.Forms.PictureBox();
             this.picWall11 = new System.Windows.Forms.PictureBox();
             this.picWall2 = new System.Windows.Forms.PictureBox();
@@ -47,8 +49,7 @@
             this.picWall3 = new System.Windows.Forms.PictureBox();
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
-            this.picDiamond = new System.Windows.Forms.PictureBox();
-            this.PlayerHealth = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picDiamond)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoldCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
@@ -67,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiamond)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInGameTime
@@ -106,6 +106,26 @@
             this.scoreDisplay.TabIndex = 19;
             this.scoreDisplay.Text = "Health";
             // 
+            // PlayerHealth
+            // 
+            this.PlayerHealth.BackColor = System.Drawing.Color.Green;
+            this.PlayerHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerHealth.ForeColor = System.Drawing.Color.White;
+            this.PlayerHealth.Location = new System.Drawing.Point(1637, 63);
+            this.PlayerHealth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PlayerHealth.Name = "PlayerHealth";
+            this.PlayerHealth.Size = new System.Drawing.Size(265, 31);
+            this.PlayerHealth.TabIndex = 21;
+            // 
+            // picDiamond
+            // 
+            this.picDiamond.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.diamond;
+            this.picDiamond.Location = new System.Drawing.Point(441, 123);
+            this.picDiamond.Name = "picDiamond";
+            this.picDiamond.Size = new System.Drawing.Size(137, 128);
+            this.picDiamond.TabIndex = 20;
+            this.picDiamond.TabStop = false;
+            // 
             // picGoldCoin
             // 
             this.picGoldCoin.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.gold;
@@ -120,7 +140,7 @@
             this.picWall11.BackColor = System.Drawing.Color.Transparent;
             this.picWall11.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
             this.picWall11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picWall11.Location = new System.Drawing.Point(826, 523);
+            this.picWall11.Location = new System.Drawing.Point(850, 572);
             this.picWall11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picWall11.Name = "picWall11";
             this.picWall11.Size = new System.Drawing.Size(246, 357);
@@ -192,7 +212,7 @@
             this.picWall10.BackColor = System.Drawing.Color.Transparent;
             this.picWall10.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
             this.picWall10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picWall10.Location = new System.Drawing.Point(950, 151);
+            this.picWall10.Location = new System.Drawing.Point(1106, 139);
             this.picWall10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picWall10.Name = "picWall10";
             this.picWall10.Size = new System.Drawing.Size(363, 175);
@@ -204,7 +224,7 @@
             this.picWall9.BackColor = System.Drawing.Color.Transparent;
             this.picWall9.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
             this.picWall9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picWall9.Location = new System.Drawing.Point(338, 281);
+            this.picWall9.Location = new System.Drawing.Point(383, 281);
             this.picWall9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picWall9.Name = "picWall9";
             this.picWall9.Size = new System.Drawing.Size(389, 182);
@@ -276,7 +296,7 @@
             this.picEnemyPoisonPacket.BackColor = System.Drawing.Color.Transparent;
             this.picEnemyPoisonPacket.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_poisonpacket;
             this.picEnemyPoisonPacket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picEnemyPoisonPacket.Location = new System.Drawing.Point(193, 115);
+            this.picEnemyPoisonPacket.Location = new System.Drawing.Point(585, 487);
             this.picEnemyPoisonPacket.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picEnemyPoisonPacket.Name = "picEnemyPoisonPacket";
             this.picEnemyPoisonPacket.Size = new System.Drawing.Size(94, 148);
@@ -318,26 +338,6 @@
             this.picPlayer.TabIndex = 0;
             this.picPlayer.TabStop = false;
             // 
-            // picDiamond
-            // 
-            this.picDiamond.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.diamond;
-            this.picDiamond.Location = new System.Drawing.Point(441, 123);
-            this.picDiamond.Name = "picDiamond";
-            this.picDiamond.Size = new System.Drawing.Size(137, 128);
-            this.picDiamond.TabIndex = 20;
-            this.picDiamond.TabStop = false;
-            // 
-            // PlayerHealth
-            // 
-            this.PlayerHealth.BackColor = System.Drawing.Color.Green;
-            this.PlayerHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerHealth.ForeColor = System.Drawing.Color.White;
-            this.PlayerHealth.Location = new System.Drawing.Point(1637, 63);
-            this.PlayerHealth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.PlayerHealth.Name = "PlayerHealth";
-            this.PlayerHealth.Size = new System.Drawing.Size(265, 31);
-            this.PlayerHealth.TabIndex = 21;
-            // 
             // FrmLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -376,6 +376,7 @@
             this.Load += new System.EventHandler(this.FrmLevel_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLevel_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLevel_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.picDiamond)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoldCoin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
@@ -394,7 +395,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDiamond)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

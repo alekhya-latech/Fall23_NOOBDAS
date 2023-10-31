@@ -99,7 +99,11 @@ namespace Fall2020_CSC403_Project {
                 else
                 {
                        Close();
+                    SoundPlayer simpleSound = new SoundPlayer(Resources.wingame);
+                    simpleSound.Play();
                     instance = null;
+                    
+
                 }
                
             }

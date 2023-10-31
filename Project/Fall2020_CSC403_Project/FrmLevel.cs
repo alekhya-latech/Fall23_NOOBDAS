@@ -106,13 +106,15 @@ namespace Fall2020_CSC403_Project {
       //check collision with Healing Objects
       if (HitAChar(player, goldcoin))
             {
+                
                 picGoldCoin.Visible = false;
                 player.Health = 20;
 
             }
 
       if (HitAChar(player, diamond))
-            { 
+            {
+                
                 picDiamond.Visible = false;
                 player.Health = 20;
             }
