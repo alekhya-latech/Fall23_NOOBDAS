@@ -43,6 +43,7 @@ namespace Fall2020_CSC403_Project
             this.label1.Size = new System.Drawing.Size(772, 109);
             this.label1.TabIndex = 4;
             this.label1.Text = "Select character!!";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button4
             // 
@@ -141,6 +142,11 @@ namespace Fall2020_CSC403_Project
         }
 
         private void Welcome_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
