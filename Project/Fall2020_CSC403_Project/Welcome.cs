@@ -127,8 +127,8 @@ namespace Fall2020_CSC403_Project
         }
         private void button3_Click(object sender, EventArgs e)
         {   
-            FrmLevel frmlevel = new FrmLevel(button3.BackgroundImage);
-            frmlevel.ShowDialog();
+            FrmHardLevel frmHardlevel = new FrmHardLevel(button3.BackgroundImage);
+            frmHardlevel.ShowDialog();
             Close();
 
         }
