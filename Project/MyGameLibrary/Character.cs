@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Fall2020_CSC403_Project.code {
@@ -41,7 +42,21 @@ namespace Fall2020_CSC403_Project.code {
       MoveSpeed = new Vector2(0, +GO_INC);
     }
 
-    public void ResetMoveSpeed() {
+    public void Jump()
+        {
+            Console.WriteLine("Hi!");
+            MoveSpeed = new Vector2 (0, -100);
+            Position = new Vector2(Position.x + MoveSpeed.x, Position.y + MoveSpeed.y); // Update the position based on the velocity
+           // Thread.Sleep(10000);
+            Position = LastPosition;
+
+
+
+
+
+        }
+
+        public void ResetMoveSpeed() {
       MoveSpeed = new Vector2(0, 0);
     }
   }
