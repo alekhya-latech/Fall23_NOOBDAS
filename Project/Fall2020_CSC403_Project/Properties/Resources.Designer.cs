@@ -132,6 +132,16 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fire {
+            get {
+                object obj = ResourceManager.GetObject("fire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fireman {
             get {
                 object obj = ResourceManager.GetObject("fireman", resourceCulture);
@@ -145,6 +155,16 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap gold {
             get {
                 object obj = ResourceManager.GetObject("gold", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gun {
+            get {
+                object obj = ResourceManager.GetObject("gun", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -204,6 +224,16 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap player {
             get {
                 object obj = ResourceManager.GetObject("player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap poison {
+            get {
+                object obj = ResourceManager.GetObject("poison", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

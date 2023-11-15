@@ -153,6 +153,9 @@
     <None Include="data\coin.wav" />
     <None Include="data\texture.jpeg" />
     <None Include="data\heart.png" />
+    <None Include="data\poison.jpeg" />
+    <None Include="data\fire.jpeg" />
+    <None Include="data\gun.jpeg" />
     <Content Include="data\wingame.wav" />
     <None Include="data\win.jpg" />
     <Content Include="data\lossgame.wav" />
