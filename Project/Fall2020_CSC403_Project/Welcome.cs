@@ -1,4 +1,5 @@
 ﻿using Fall2020_CSC403_Project.code;
+using Fall2020_CSC403_Project.data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -103,7 +104,7 @@ namespace Fall2020_CSC403_Project
             // easy
             // 
             this.easy.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.easy.Location = new System.Drawing.Point(628, 134);
+            this.easy.Location = new System.Drawing.Point(572, 131);
             this.easy.Name = "easy";
             this.easy.Size = new System.Drawing.Size(175, 80);
             this.easy.TabIndex = 5;
@@ -114,7 +115,7 @@ namespace Fall2020_CSC403_Project
             // hard
             // 
             this.hard.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.hard.Location = new System.Drawing.Point(628, 286);
+            this.hard.Location = new System.Drawing.Point(572, 279);
             this.hard.Name = "hard";
             this.hard.Size = new System.Drawing.Size(175, 75);
             this.hard.TabIndex = 6;
@@ -131,6 +132,7 @@ namespace Fall2020_CSC403_Project
             this.button5.TabIndex = 7;
             this.button5.Text = "Help";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Welcome
             // 
@@ -259,6 +261,12 @@ namespace Fall2020_CSC403_Project
             level = 1;
 
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            help window = new help();
+            window.ShowDialog();
         }
     }
 }
