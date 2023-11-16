@@ -18,6 +18,7 @@ namespace Fall2020_CSC403_Project
         private Button easy;
         private Button hard;
         private Label label1;
+        private Button button5;
         private int level = -1;
 
         public Welcome()
@@ -35,19 +36,20 @@ namespace Fall2020_CSC403_Project
             this.button1 = new System.Windows.Forms.Button();
             this.easy = new System.Windows.Forms.Button();
             this.hard = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightCoral;
-            this.label1.Location = new System.Drawing.Point(317, 307);
+            this.label1.Location = new System.Drawing.Point(384, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(772, 109);
+            this.label1.Size = new System.Drawing.Size(587, 55);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Select character!!";
+            this.label1.Text = "Select  level and character!!";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button4
@@ -55,9 +57,9 @@ namespace Fall2020_CSC403_Project
             this.button4.AutoEllipsis = true;
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.fireman;
-            this.button4.Location = new System.Drawing.Point(879, 405);
+            this.button4.Location = new System.Drawing.Point(891, 429);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(210, 137);
+            this.button4.Size = new System.Drawing.Size(210, 241);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -68,9 +70,9 @@ namespace Fall2020_CSC403_Project
             this.button3.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.pumpkinHead;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(650, 419);
+            this.button3.Location = new System.Drawing.Point(651, 424);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 137);
+            this.button3.Size = new System.Drawing.Size(175, 251);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -79,9 +81,9 @@ namespace Fall2020_CSC403_Project
             // 
             this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.button2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.cute_man;
-            this.button2.Location = new System.Drawing.Point(418, 429);
+            this.button2.Location = new System.Drawing.Point(419, 429);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(204, 137);
+            this.button2.Size = new System.Drawing.Size(204, 241);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -91,32 +93,44 @@ namespace Fall2020_CSC403_Project
             this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.swordman;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(196, 443);
+            this.button1.Location = new System.Drawing.Point(196, 429);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 137);
+            this.button1.Size = new System.Drawing.Size(185, 241);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // easy
             // 
-            this.easy.Location = new System.Drawing.Point(670, 184);
+            this.easy.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.easy.Location = new System.Drawing.Point(628, 134);
             this.easy.Name = "easy";
-            this.easy.Size = new System.Drawing.Size(75, 23);
+            this.easy.Size = new System.Drawing.Size(175, 80);
             this.easy.TabIndex = 5;
             this.easy.Text = "Easy";
-            this.easy.UseVisualStyleBackColor = true;
+            this.easy.UseVisualStyleBackColor = false;
             this.easy.Click += new System.EventHandler(this.easy_Click);
             // 
             // hard
             // 
-            this.hard.Location = new System.Drawing.Point(670, 264);
+            this.hard.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.hard.Location = new System.Drawing.Point(628, 286);
             this.hard.Name = "hard";
-            this.hard.Size = new System.Drawing.Size(75, 23);
+            this.hard.Size = new System.Drawing.Size(175, 75);
             this.hard.TabIndex = 6;
             this.hard.Text = "Hard";
-            this.hard.UseVisualStyleBackColor = true;
+            this.hard.UseVisualStyleBackColor = false;
             this.hard.Click += new System.EventHandler(this.hard_Click_1);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LightGray;
+            this.button5.Location = new System.Drawing.Point(1132, 54);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(143, 53);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Help";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // Welcome
             // 
@@ -124,6 +138,7 @@ namespace Fall2020_CSC403_Project
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1749, 707);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.hard);
             this.Controls.Add(this.easy);
             this.Controls.Add(this.label1);
@@ -132,6 +147,7 @@ namespace Fall2020_CSC403_Project
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Welcome";
+            this.Text = "Main menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Welcome_Load);
             this.ResumeLayout(false);
