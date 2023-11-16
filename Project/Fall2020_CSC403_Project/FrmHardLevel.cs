@@ -41,7 +41,7 @@ namespace Fall2020_CSC403_Project
         private PictureBox weapon3;
         private PictureBox picpoison;
         private PictureBox picfire;
-        private PictureBox pictureBox1;
+        private PictureBox picWall10;
         private PictureBox health0;
         private PictureBox cheetohealth1;
         private PictureBox cheetohealth2;
@@ -78,7 +78,7 @@ namespace Fall2020_CSC403_Project
         private void FrmHardLevel_Load(object sender, EventArgs e)
         {
             const int PADDING = 7;
-            const int NUM_WALLS = 7;
+            const int NUM_WALLS = 11;
             const int NUM_HEALING_OBJECTS = 6;
             bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
             enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
@@ -136,7 +136,7 @@ namespace Fall2020_CSC403_Project
             this.weapon3 = new System.Windows.Forms.PictureBox();
             this.picpoison = new System.Windows.Forms.PictureBox();
             this.picfire = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picWall10 = new System.Windows.Forms.PictureBox();
             this.health0 = new System.Windows.Forms.PictureBox();
             this.cheetohealth1 = new System.Windows.Forms.PictureBox();
             this.cheetohealth2 = new System.Windows.Forms.PictureBox();
@@ -174,7 +174,7 @@ namespace Fall2020_CSC403_Project
             ((System.ComponentModel.ISupportInitialize)(this.weapon3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picpoison)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picfire)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.health0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheetohealth1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheetohealth2)).BeginInit();
@@ -443,14 +443,14 @@ namespace Fall2020_CSC403_Project
             this.picfire.TabIndex = 26;
             this.picfire.TabStop = false;
             // 
-            // pictureBox1
+            // picWall10
             // 
-            this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
-            this.pictureBox1.Location = new System.Drawing.Point(1100, 335);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 32);
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
+            this.picWall10.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall10.Location = new System.Drawing.Point(1100, 335);
+            this.picWall10.Name = "picWall10";
+            this.picWall10.Size = new System.Drawing.Size(119, 32);
+            this.picWall10.TabIndex = 29;
+            this.picWall10.TabStop = false;
             // 
             // health0
             // 
@@ -591,7 +591,7 @@ namespace Fall2020_CSC403_Project
             this.Controls.Add(this.cheetohealth2);
             this.Controls.Add(this.cheetohealth1);
             this.Controls.Add(this.health0);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picWall10);
             this.Controls.Add(this.picfire);
             this.Controls.Add(this.picpoison);
             this.Controls.Add(this.weapon3);
@@ -648,7 +648,7 @@ namespace Fall2020_CSC403_Project
             ((System.ComponentModel.ISupportInitialize)(this.weapon3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picpoison)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picfire)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.health0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheetohealth1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheetohealth2)).EndInit();
