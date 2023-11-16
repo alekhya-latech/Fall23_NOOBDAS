@@ -82,19 +82,19 @@ namespace Fall2020_CSC403_Project
             // button2
             // 
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.Location = new System.Drawing.Point(815, 300);
+            this.button2.Location = new System.Drawing.Point(688, 317);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(265, 169);
+            this.button2.Size = new System.Drawing.Size(405, 148);
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // buttonPlayAgain
             // 
-            this.buttonPlayAgain.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.play_again;
+            this.buttonPlayAgain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPlayAgain.BackgroundImage")));
             this.buttonPlayAgain.Location = new System.Drawing.Point(165, 317);
             this.buttonPlayAgain.Name = "buttonPlayAgain";
-            this.buttonPlayAgain.Size = new System.Drawing.Size(401, 135);
+            this.buttonPlayAgain.Size = new System.Drawing.Size(418, 135);
             this.buttonPlayAgain.TabIndex = 1;
             this.buttonPlayAgain.UseVisualStyleBackColor = true;
             this.buttonPlayAgain.Click += new System.EventHandler(this.buttonPlayAgain_Click);
@@ -107,11 +107,15 @@ namespace Fall2020_CSC403_Project
             this.Controls.Add(this.label1);
             this.Name = "ResultForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ResultForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+        private void ResultForm_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
