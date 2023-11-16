@@ -165,6 +165,7 @@
     <None Include="data\poison.jpeg" />
     <None Include="data\fire.jpeg" />
     <None Include="data\gun.jpeg" />
+    <None Include="data\water.png" />
     <Content Include="data\wingame.wav" />
     <None Include="data\win.jpg" />
     <Content Include="data\lossgame.wav" />

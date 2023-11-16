@@ -150,7 +150,6 @@ namespace Fall2020_CSC403_Project
             this.Controls.Add(this.button1);
             this.Name = "Welcome";
             this.Text = "Main menu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Welcome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

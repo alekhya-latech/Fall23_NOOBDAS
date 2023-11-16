@@ -45,6 +45,7 @@ namespace Fall2020_CSC403_Project
             // 
             // MenuForm
             // 
+            this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
             this.ClientSize = new System.Drawing.Size(1260, 694);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

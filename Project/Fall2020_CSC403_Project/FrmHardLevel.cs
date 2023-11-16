@@ -434,12 +434,12 @@ namespace Fall2020_CSC403_Project
             // picfire
             // 
             this.picfire.BackColor = System.Drawing.Color.Transparent;
-            this.picfire.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.fire;
+            this.picfire.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.water;
             this.picfire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picfire.Location = new System.Drawing.Point(45, 105);
             this.picfire.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.picfire.Name = "picfire";
-            this.picfire.Size = new System.Drawing.Size(75, 79);
+            this.picfire.Size = new System.Drawing.Size(116, 97);
             this.picfire.TabIndex = 26;
             this.picfire.TabStop = false;
             // 
@@ -558,9 +558,10 @@ namespace Fall2020_CSC403_Project
             // heartsCount
             // 
             this.heartsCount.AutoSize = true;
+            this.heartsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heartsCount.Location = new System.Drawing.Point(1201, 6);
             this.heartsCount.Name = "heartsCount";
-            this.heartsCount.Size = new System.Drawing.Size(18, 20);
+            this.heartsCount.Size = new System.Drawing.Size(24, 26);
             this.heartsCount.TabIndex = 41;
             this.heartsCount.Text = "0";
             // 
@@ -663,6 +664,11 @@ namespace Fall2020_CSC403_Project
 
         private void tmrPlayerMove_Tick(object sender, EventArgs e)
         {
+            if (isGamePaused)
+            {
+
+                return;
+            }
             // move player
             player.Move();
 
