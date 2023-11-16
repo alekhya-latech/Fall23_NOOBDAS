@@ -35,7 +35,7 @@
   - Integration of a health score display in the top right corner.
   - Dynamic update of the health display.
 
-## Additional User Stories
+## Sprint2 - Additional User Stories
 
 ### User Story 6: Game Level Selection
 - **Description:** As a user, I can choose the game level (easy or hard).
